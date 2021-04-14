@@ -20,8 +20,8 @@ public class Printer {
      */
     public static void print(Object... args) {
 
-        for (int i = 0; i < args.length; i++) {
-            System.out.print(args[i]);
+        for (Object arg : args) {
+            System.out.print(arg + " ");
         }
 
     }
