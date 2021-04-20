@@ -10,7 +10,7 @@ import java.util.Scanner;
  **/
 public class Menu {
 
-    public void run(){
+    public void run() {
         Scanner reader = new Scanner(System.in);
         this.showInputNumber();
         double firstNumber = reader.nextDouble();
