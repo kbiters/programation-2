@@ -9,7 +9,9 @@ import java.util.Scanner;
  * @version: 18/04/2021
  **/
 public class Menu {
-
+    /**
+     * 
+     */
     public void run() {
 
         Scanner reader = new Scanner(System.in);

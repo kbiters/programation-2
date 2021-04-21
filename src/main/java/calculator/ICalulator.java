@@ -1,5 +1,8 @@
 package calculator;
 
+/**
+ *
+ */
 public interface ICalulator {
 
     double sum(double firstNumber, double secondNumber);

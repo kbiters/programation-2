@@ -3,7 +3,9 @@ package calculator;
 import java.util.HashMap;
 import java.util.Map;
 
-
+/**
+ *
+ */
 public enum Operator {
     SUM("+"), SUBTRACT("-"), MULTIPLY("*"), DIVIDE("/");
 
