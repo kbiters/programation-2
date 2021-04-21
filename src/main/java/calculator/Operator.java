@@ -7,7 +7,7 @@ import java.util.Map;
 public enum Operator {
     SUM("+"), SUBTRACT("-"), MULTIPLY("*"), DIVIDE("/");
 
-    private static Map<String, Operator> operatorMap = new HashMap<String, Operator>();
+    private static final Map<String, Operator> operatorMap = new HashMap<String, Operator>();
 
     private final String value;
 
@@ -21,8 +21,8 @@ public enum Operator {
         this.value = value;
     }
 
-    public static Operator getOperator(String key) {
-        return operatorMap.get(key);
+    public static Operator getOperator(String operator) {
+        return operatorMap.get(operator);
     }
 
 }

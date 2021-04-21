@@ -1,7 +1,5 @@
 package calculator;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /**
@@ -14,30 +12,24 @@ public class Menu {
 
     public void run() {
 
-        Scanner reader = null;
+        Scanner reader = new Scanner(System.in);
+        Calculator calc = new Calculator();
 
-        try{
-            reader = new Scanner(new File("test.txt"));
-            while (reader.hasNext()){
-                Printer.print(reader.nextLine());
-            }
-        } catch (FileNotFoundException ex){
-            ex.printStackTrace();
-        }finally {
-            if (reader != null){
-                reader.close();
-            }
+        try {
+
+            this.showInputNumber();
+            calc.setFirstNumber(reader.nextDouble());
+            this.showInputNumber();
+            calc.setSecondNumber(reader.nextDouble());
+            this.showInputOperator();
+            calc.setOperator(reader.next());
+
+        } catch (Exception e) {
+            throw new IllegalArgumentException(e);
         }
 
-        this.showInputNumber();
-        double firstNumber = reader.nextDouble();
-        this.showInputNumber();
-        double secondNumber = reader.nextDouble();
-        this.showInputOperator();
-        String operator = reader.next();
-        Calculator calc = new Calculator();
-        double result = calc.math(firstNumber, secondNumber, operator);
-        this.showResult(firstNumber, secondNumber, operator, result);
+        calc.math(calc.getFirstNumber(), calc.getSecondNumber(), calc.getOperator());
+        this.showResult(calc.getFirstNumber(), calc.getSecondNumber(), calc.getOperator(), calc.getResult());
     }
 
     /**
@@ -63,8 +55,7 @@ public class Menu {
      * @param Operator
      * @param result
      */
-    public void showResult(double firstNumber, double secondNumber,
-                           String Operator, double result) {
+    public void showResult(double firstNumber, double secondNumber, String Operator, double result) {
         Printer.print(Constant.RESULT, firstNumber, Operator, secondNumber, "=", result);
     }
 

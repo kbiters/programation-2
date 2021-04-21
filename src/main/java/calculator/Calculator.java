@@ -1,67 +1,82 @@
 package calculator;
 
-import java.util.Scanner;
-
 public class Calculator implements ICalulator {
 
-    private double firstNumber, secondNumber;
+    private double firstNumber;
+    private double secondNumber;
+    private double result;
     private String operator;
 
-    public double math(double firstNumber, double secondNumber, String operator) {
+    public void math(double firstNumber, double secondNumber, String operator) {
 
         switch (Operator.getOperator(operator)) {
             case SUM:
-                return sum(firstNumber, secondNumber);
+                this.setResult(sum(firstNumber, secondNumber));
+                break;
             case SUBTRACT:
-                return sub(firstNumber, secondNumber);
+                this.setResult(sub(firstNumber, secondNumber));
+                break;
             case MULTIPLY:
-                return multiply(firstNumber, secondNumber);
+                this.setResult(multiply(firstNumber, secondNumber));
+                break;
             case DIVIDE:
-                return divition(firstNumber, secondNumber);
+                this.setResult(divide(firstNumber, secondNumber));
+                break;
             default:
-                System.out.println("Illigal Operation");
+                throw new ArithmeticException("Invalid Operator");
         }
-        return 0;
+
+    }
+
+    public double getFirstNumber() {
+        return firstNumber;
     }
 
     public void setFirstNumber(double firstNumber) {
         this.firstNumber = firstNumber;
     }
 
+    public double getSecondNumber() {
+        return secondNumber;
+    }
+
     public void setSecondNumber(double secondNumber) {
         this.secondNumber = secondNumber;
     }
 
-    public Double getFirstNumber() {
-        return firstNumber;
+    public String getOperator() {
+        return operator;
     }
 
-    public Double getSecondNumber() {
-        return secondNumber;
+    public void setOperator(String operator) {
+        this.operator = operator;
+    }
+
+    public double getResult() {
+        return result;
+    }
+
+    public void setResult(double result) {
+        this.result = result;
     }
 
     @Override
     public double sum(double firstNumber, double secondNumber) {
         return firstNumber + secondNumber;
-
     }
 
     @Override
     public double sub(double firstNumber, double secondNumber) {
         return firstNumber - secondNumber;
-
     }
 
     @Override
     public double multiply(double firstNumber, double secondNumber) {
         return firstNumber * secondNumber;
-
     }
 
     @Override
-    public double divition(double firstNumber, double secondNumber) {
+    public double divide(double firstNumber, double secondNumber) {
         return firstNumber / secondNumber;
-
     }
-
 }
