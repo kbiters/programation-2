@@ -17,7 +17,7 @@ public enum Operator {
         }
     }
 
-    private Operator(String value) {
+    Operator(String value) {
         this.value = value;
     }
 

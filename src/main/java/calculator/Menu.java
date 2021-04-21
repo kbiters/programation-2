@@ -1,5 +1,7 @@
 package calculator;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /**
@@ -11,7 +13,22 @@ import java.util.Scanner;
 public class Menu {
 
     public void run() {
-        Scanner reader = new Scanner(System.in);
+
+        Scanner reader = null;
+
+        try{
+            reader = new Scanner(new File("test.txt"));
+            while (reader.hasNext()){
+                Printer.print(reader.nextLine());
+            }
+        } catch (FileNotFoundException ex){
+            ex.printStackTrace();
+        }finally {
+            if (reader != null){
+                reader.close();
+            }
+        }
+
         this.showInputNumber();
         double firstNumber = reader.nextDouble();
         this.showInputNumber();
@@ -28,7 +45,6 @@ public class Menu {
      */
     public void showInputNumber() {
         Printer.print(Constant.INPUT_NUMBER);
-
     }
 
     /**

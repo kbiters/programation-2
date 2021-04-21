@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Calculator implements ICalulator {
 
-    private double num1, num2;
+    private double firstNumber, secondNumber;
     private String operator;
 
     public double math(double firstNumber, double secondNumber, String operator) {
@@ -25,19 +25,19 @@ public class Calculator implements ICalulator {
     }
 
     public void setFirstNumber(double firstNumber) {
-        this.num1 = firstNumber;
+        this.firstNumber = firstNumber;
     }
 
     public void setSecondNumber(double secondNumber) {
-        this.num2 = secondNumber;
+        this.secondNumber = secondNumber;
     }
 
     public Double getFirstNumber() {
-        return num1;
+        return firstNumber;
     }
 
     public Double getSecondNumber() {
-        return num2;
+        return secondNumber;
     }
 
     @Override
