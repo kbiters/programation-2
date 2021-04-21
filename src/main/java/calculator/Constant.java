@@ -5,6 +5,7 @@ package calculator;
  *
  * @author: Kbiters
  * @version: 18/04/2021
+ * @see:
  **/
 public class Constant {
     final static String INPUT_NUMBER = "Enter a number:";

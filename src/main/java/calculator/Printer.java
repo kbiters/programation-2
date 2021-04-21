@@ -8,6 +8,7 @@ package calculator;
  *
  * @author: Kbiters
  * @version: 14/04/2021
+ * @see:
  **/
 
 public class Printer {
@@ -15,8 +16,8 @@ public class Printer {
     /**
      * Function to print an argument or several arguments
      *
-     * @param args The args parameter defines the number of elements that the series
-     *             will have.
+     * @param args The args parameter defines the number
+     *             of elements that the series will have.
      */
     public static void print(Object... args) {
 

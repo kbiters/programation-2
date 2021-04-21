@@ -1,8 +1,14 @@
 package calculator;
 
 /**
+ * Calculator" class, to declare all "setters", "getters" that we will
+ * use in the project, as well as to define the "math" function and
+ * perform the mathematical operations..
  *
- */
+ * @author: Kbiters
+ * @version: 19/04/2021
+ * @see:
+ **/
 public class Calculator implements ICalulator {
 
     private double firstNumber;
@@ -11,6 +17,12 @@ public class Calculator implements ICalulator {
     private String operator;
 
     /**
+     * The "math" method receives the parameters and based on the operator,
+     * we make a mapping to see which of the 4 mathematical operations will
+     * be performed, once it is detected which one will be used, the
+     * corresponding function will be called, the "firstNumber" and
+     * "secondNumber" will be passed to perform the operation and its
+     * result will be set by "setResult".
      *
      * @param firstNumber
      * @param secondNumber
@@ -34,10 +46,10 @@ public class Calculator implements ICalulator {
             default:
                 throw new ArithmeticException("Invalid Operator");
         }
-
     }
 
     /**
+     * Method to obtain the first number and return it
      *
      * @return
      */
@@ -46,6 +58,7 @@ public class Calculator implements ICalulator {
     }
 
     /**
+     * Method to enter the first number in the variable.
      *
      * @param firstNumber
      */
@@ -54,6 +67,7 @@ public class Calculator implements ICalulator {
     }
 
     /**
+     * Method to obtain the second number and return it
      *
      * @return
      */
@@ -62,6 +76,7 @@ public class Calculator implements ICalulator {
     }
 
     /**
+     * Method to enter the second number to the variable.
      *
      * @param secondNumber
      */
@@ -70,6 +85,7 @@ public class Calculator implements ICalulator {
     }
 
     /**
+     * Method to obtain the operator and return it.
      *
      * @return
      */
@@ -78,6 +94,7 @@ public class Calculator implements ICalulator {
     }
 
     /**
+     * Method to enter the operator to the variable.
      *
      * @param operator
      */
@@ -86,6 +103,7 @@ public class Calculator implements ICalulator {
     }
 
     /**
+     * Method to obtain the result and return it.
      *
      * @return
      */
@@ -94,6 +112,7 @@ public class Calculator implements ICalulator {
     }
 
     /**
+     * Method to enter the result to the variable.
      *
      * @param result
      */
@@ -102,6 +121,8 @@ public class Calculator implements ICalulator {
     }
 
     /**
+     * Method that receives the 2 parameters and performs the operation: "sum"
+     * and returns the result.
      *
      * @param firstNumber
      * @param secondNumber
@@ -113,6 +134,8 @@ public class Calculator implements ICalulator {
     }
 
     /**
+     * Method that receives the 2 parameters and performs the operation: "subtract"
+     * and returns the result.
      *
      * @param firstNumber
      * @param secondNumber
@@ -124,6 +147,8 @@ public class Calculator implements ICalulator {
     }
 
     /**
+     * Method that receives the 2 parameters and performs the operation: "multiply"
+     * and returns the result.
      *
      * @param firstNumber
      * @param secondNumber
@@ -135,6 +160,8 @@ public class Calculator implements ICalulator {
     }
 
     /**
+     * Method that receives the 2 parameters and performs the operation: "divide"
+     * and returns the result.
      *
      * @param firstNumber
      * @param secondNumber

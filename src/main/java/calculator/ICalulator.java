@@ -1,7 +1,13 @@
 package calculator;
 
 /**
+ * Interface "ICalculator", is a collection of abstract methods
+ * and constant properties. The interface can be used by any
+ * other code.
  *
+ * @author: Kbiters
+ * @version: 19/04/2021
+ * @see:
  */
 public interface ICalulator {
 
