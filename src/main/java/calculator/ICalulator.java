@@ -8,5 +8,5 @@ public interface ICalulator {
 
     double multiply(double firstNumber, double secondNumber);
 
-    double divition(double firstNumber, double secondNumber);
+    double divide(double firstNumber, double secondNumber);
 }
