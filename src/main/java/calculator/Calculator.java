@@ -7,7 +7,7 @@ package calculator;
  *
  * @author: Kbiters
  * @version: 19/04/2021
- * @see:
+ * @see: https://github.com/kbiters/programation-2/blob/main/src/main/java/calculator/Calculator.java
  **/
 public class Calculator implements ICalulator {
 

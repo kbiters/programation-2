@@ -9,7 +9,7 @@ import java.util.Map;
  *
  * @author: Kbiters
  * @version: 19/04/2021
- * @see:
+ * @see: https://github.com/kbiters/programation-2/blob/main/src/main/java/calculator/Operator.java
  */
 public enum Operator {
     SUM("+"), SUBTRACT("-"), MULTIPLY("*"), DIVIDE("/");
