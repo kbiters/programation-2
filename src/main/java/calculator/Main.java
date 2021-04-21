@@ -5,7 +5,7 @@ package calculator;
  *
  * @author: Kbiters
  * @version: 18/04/2021
- * @see:
+ * @see: https://github.com/kbiters/programation-2/blob/main/src/main/java/calculator/Main.java
  */
 public class Main {
     /**
